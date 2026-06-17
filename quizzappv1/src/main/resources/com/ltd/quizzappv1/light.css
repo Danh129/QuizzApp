@@ -1,0 +1,30 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 17, 2026, 3:02:14 PM
+    Author     : admin
+*/
+
+.Container {
+    -fx-background-color: white;
+    -fx-alignment: CENTER;
+    -fx-spacing: 15;
+}
+
+.Subject {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-fill: red;
+    -fx-stroke-weight: 2;
+    -fx-stroke: gold;
+}
+
+.btn {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+    -fx-padding: 8;
+    -fx-font-size: 16;
+    -fx-pref-width: 200;
+}

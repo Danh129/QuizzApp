@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="314.0" styleClass="Container" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ltd.quizzappv1.PrimaryController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Subject" text="Quzz App ">
+         <fill>
+            <RadialGradient centerX="0.43922651933701656" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color opacity="0.6899999976158142" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Button mnemonicParsing="false" onAction="#ManageQuestions" styleClass="btn" text="Quản Lý Câu Hỏi" />
+      <Button mnemonicParsing="false" onAction="#practice" styleClass="btn" text="Luyên Tâp" />
+      <Button mnemonicParsing="false" onAction="#exam" styleClass="btn" text="Luyên Thi" />
+      <ComboBox fx:id="cbthemes" onAction="#ChangeTheme" prefWidth="150.0" styleClass="btn" />
+   </children>
+</VBox>
