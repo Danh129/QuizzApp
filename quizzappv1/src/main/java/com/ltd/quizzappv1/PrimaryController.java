@@ -19,7 +19,8 @@ public class PrimaryController implements Initializable{
        this.cbthemes.setItems(FXCollections.observableArrayList(ThemeTypes.values()));
     }
     public void ManageQuestions(ActionEvent e ){
-        MyAlertSingleton.getInstance().showMsg("[ManageQuestion] comming soon....");
+        //MyAlertSingleton.getInstance().showMsg("[ManageQuestion] comming soon....");
+        
     }
     
     public void practice(ActionEvent e){
