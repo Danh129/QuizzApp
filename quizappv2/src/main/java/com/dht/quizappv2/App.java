@@ -18,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"));
+        scene = new Scene(loadFXML("questions"));
         stage.setScene(scene);
         stage.show();
     }
@@ -26,6 +26,8 @@ public class App extends Application {
     @Override
     public void stop() throws Exception {
         super.stop(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+        
+        MyConnSingleton.getInstance().close();
     }
     
     

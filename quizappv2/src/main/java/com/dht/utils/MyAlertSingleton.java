@@ -10,18 +10,18 @@ import javafx.scene.control.Alert;
  *
  * @author admin
  */
-public class MyAlert {
-    private static MyAlert instance;
+public class MyAlertSingleton {
+    private static MyAlertSingleton instance;
     private final Alert alert;
     
-    private MyAlert() {
+    private MyAlertSingleton() {
         this.alert = new Alert(Alert.AlertType.INFORMATION);
         this.alert.setTitle("quizapp");
     }
     
-    public static MyAlert getInstance() {
+    public static MyAlertSingleton getInstance() {
         if (instance == null)
-            instance = new MyAlert();
+            instance = new MyAlertSingleton();
         
         return instance;
     }

@@ -1,22 +1,15 @@
 package com.dht.quizappv2;
 
-import com.dht.utils.MyAlert;
+import com.dht.utils.MyAlertSingleton;
 import com.dht.utils.MyStageSingleton;
-import com.dht.utils.themes.DarkFactory;
-import com.dht.utils.themes.LightFactory;
-import com.dht.utils.themes.ThemeManager;
 import com.dht.utils.themes.ThemeTypes;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
-import javafx.stage.Stage;
 
 
 public class PrimaryController implements Initializable {
@@ -28,29 +21,15 @@ public class PrimaryController implements Initializable {
     }
     
     public void manageQuestions(ActionEvent e) {
-        //MyAlert.getInstance().showAlert("Comming soon...");
-//        try {
-//            
-//            Stage stage = new Stage();
-//            
-//            Scene scene = new Scene(new FXMLLoader(App.class.getResource("question.fxml")).load());
-//            stage.setScene(scene);
-//            stage.show();
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//        }
-
         MyStageSingleton.getInstance().showStage("questions");
-           
-
     }
     
     public void practice(ActionEvent e) {
-        MyAlert.getInstance().showAlert("Comming soon...");
+        MyAlertSingleton.getInstance().showAlert("Comming soon...");
     }
     
     public void exam(ActionEvent e) {
-        MyAlert.getInstance().showAlert("Comming soon...");
+        MyAlertSingleton.getInstance().showAlert("Comming soon...");
     }
 
     public void changeTheme(ActionEvent e) {

@@ -5,11 +5,11 @@
 package com.dht.services;
 
 import com.dht.pojo.Category;
+import com.dht.pojo.Question;
 import com.dht.utils.MyConnSingleton;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,17 +17,17 @@ import java.util.List;
  *
  * @author admin
  */
-public class CategoryServices {
-    public List<Category> getCates() throws SQLException {
-        String sql = "SELECT * FROM category";
+public class QuestionServices {
+    public List<Question> getQuestions(String kw) throws SQLException {
+        String sql = "SELECT * FROM question";
         PreparedStatement stm = MyConnSingleton.getInstance().connect().prepareCall(sql);
         ResultSet rs = stm.executeQuery();
         
-        List<Category> cates = new ArrayList<>();
+        List<Question> questions = new ArrayList<>();
         while (rs.next()) {
-            cates.add(new Category(rs.getInt("id"), rs.getString("name")));
+            questions.add(new Question.QuestionBuider().setContent(rs.getString("content")).setId(rs.getInt("id")).build());
         }
         
-        return cates;
+        return questions;
     }
 }

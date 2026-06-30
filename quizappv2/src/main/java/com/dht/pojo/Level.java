@@ -8,21 +8,18 @@ package com.dht.pojo;
  *
  * @author admin
  */
-public class Category {
+public class Level {
     private int id;
     private String name;
 
-    public Category(int id, String name) {
+    public Level() {
+    }
+
+    
+    
+    public Level(int id, String name) {
         this.id = id;
         this.name = name;
-    }
-
-    public Category() {
-    }
-
-    @Override
-    public String toString() {
-        return this.name; // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
     }
     
     
